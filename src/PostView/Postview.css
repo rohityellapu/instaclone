@@ -1,8 +1,12 @@
+body {
+  background-color: aliceblue;
+}
+
 header {
   height: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+
 }
 
 .logo {
@@ -13,6 +17,7 @@ header {
 .camera {
   float: right;
   margin: 30px;
+  margin-left: auto;
 }
 
 .like,
