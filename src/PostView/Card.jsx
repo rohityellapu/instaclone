@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PostTime from './PostTime';
 export default function Card(props) {
     let { likes, description, name, date, img, location } = props;
     return (
@@ -25,11 +25,14 @@ export default function Card(props) {
                 <div className="like">
                     <img src={ require('../images/logos/heart.png') } alt="likes" />
                 </div>
+                <div className="comment like">
+                    <img src="https://img.icons8.com/external-tanah-basah-basic-outline-tanah-basah/512/external-comments-social-media-ui-tanah-basah-basic-outline-tanah-basah.png"alt="comments" />
+                </div>
                 <div className="send">
                     <img src={ require('../images/logos/telegram.png') } alt="send" />
                 </div>
                 <div className="date">
-                    { date }
+                    { <PostTime date={ date } /> }
                 </div>
             </div>
             <div className="likes">
