@@ -3,15 +3,16 @@ import Card from './Card'
 function Post({data}) {
   return (
       <div>
-          { data.map(post => {
+      { data.map((post,index) => {
+            
               return <Card
-                  key={ post.id }
+                  key={ index }
                   name={ post.name }
                   location={ post.location }
                   description={ post.description }
                   img={ post.PostImage }
                   likes={ 20 }
-                  date={ post.createdAt.toString().split('T')[0] }
+                date={new Date(post.createdAt) }
 
               />
           })
