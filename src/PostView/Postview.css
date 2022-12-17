@@ -21,9 +21,10 @@ header {
 }
 
 .like,
-.send {
-  width: 20px;
-  height: 20px;
+.send,
+.comment {
+  width: 30px;
+  height: 30px;
 }
 
 img {
