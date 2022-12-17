@@ -7,6 +7,7 @@ const apiURL = "https://instaclone-backend-rndh.onrender.com/post";
 function Form({ setForm, postAdded }) {
     let [formData, setFormData] = useState({ name: '', location: '', description: '' })
     let [file, setFile] = useState(null);
+    let [filePath, setFilePath] = useState(null);
     let [validater, setValidator] = useState({ name: false, location: false, description: false, file: false });
     function handleChange(e) {
         const { name, value } = e.target
@@ -36,6 +37,9 @@ function Form({ setForm, postAdded }) {
             })
         }
         setFile(files[0])
+        if (files[0]) setFilePath(URL.createObjectURL(e.target.files[0]));
+        else setFilePath(null);
+       
     }
 
 
@@ -69,7 +73,7 @@ function Form({ setForm, postAdded }) {
 
             <form className='form-container' action="/post" onSubmit={ handleSubmit } method='POST' enctype="multipart/form-data">
                 <h2>Let's Post </h2>
-
+                { filePath &&  <img src={ filePath } alt='user-img' style={{maxHeight:'250px'}} /> }
                 <input className='image m' type="file" onChange={ handleFile } name="image" id="image" required />
                 { validater.file && <i>Image is required</i> }
                 <div className="name-location">
