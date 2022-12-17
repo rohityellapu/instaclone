@@ -8,7 +8,12 @@ header {
   flex-direction: row;
 
 }
-
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
 .logo {
   margin: 20px;
   float: left;
@@ -33,7 +38,7 @@ img {
 }
 
 .card {
-  margin: 20px 30%;
+  margin: 1rem;
   border: 1px solid gray;
   border-radius: 5px;
   box-shadow: 5px 5px 5px gray;
@@ -88,4 +93,9 @@ img {
 .description {
   margin: 10px;
   margin-bottom: 30px;
+}
+@media screen and (min-width:450px){
+  .card {
+    width: 556px;
+  }
 }

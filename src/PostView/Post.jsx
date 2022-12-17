@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card'
 function Post({data}) {
   return (
-      <div>
+      <div className='main-content'>
       { data.map((post,index) => {
             
               return <Card
