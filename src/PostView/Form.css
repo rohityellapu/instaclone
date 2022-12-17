@@ -18,7 +18,9 @@ input[type="file"]::-webkit-file-upload-button {
     float: right;
     border: 2px solid gray;
     border-radius: 5px;
-    height: 2.5em;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    cursor: pointer;
 
 }
 
@@ -31,7 +33,7 @@ input[type="file"]::-webkit-file-upload-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: larger;
+    
     font-weight: 600;
 }
 
@@ -58,7 +60,7 @@ input[type="file"]::-webkit-file-upload-button {
 .name,
 .location {
     width: 35%;
-    display: inline;
+    display: inline-block;
     text-align: left;
 }
 
@@ -71,11 +73,15 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 input {
+    font-size: large;
     border: 2px solid gray;
     border-radius: 5px;
     box-shadow: 1px 1px 3px gray;
 }
-
+i {
+    margin-left: 1rem;
+    display: inline-block;
+}
 .btn{
     background-color: blue;
     color: antiquewhite;
